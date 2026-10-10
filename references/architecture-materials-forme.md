@@ -1,7 +1,9 @@
 # Reference 8: Cinematic architecture and materials
 
-**Status:** reference recipe only; no implementation or deployment.  
-**Source:** [Web Fueled — Forme concept](https://www.facebook.com/reel/1446200427463376) · [Dex’s submitted share](https://www.facebook.com/share/r/1BDWZSoXTr/)  
+**Status:** reference recipe only; no implementation or deployment.
+
+**Source:** [Web Fueled — Forme concept](https://www.facebook.com/reel/1446200427463376) · [Dex’s submitted share](https://www.facebook.com/share/r/1BDWZSoXTr/)
+
 **Submitted:** October 10, 2026. **Observation provenance:** the parent researcher reviewed actual public playback in dot’s cloud Chrome without login. This documentation task did not independently inspect playback. Forme identifies the reference, not a brand to reuse.
 
 ## Observed website composition

@@ -1,6 +1,7 @@
 # Reusable prompt: Cinematic architecture and materials
 
-**Status:** prompt only. No demo, component or deployment is authorized by this catalog entry.  
+**Status:** prompt only. No demo, component or deployment is authorized by this catalog entry.
+
 [Source observations and uncertainty](../references/architecture-materials-forme.md)
 
 ## Supply project inputs
