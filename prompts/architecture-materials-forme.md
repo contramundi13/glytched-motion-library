@@ -4,6 +4,10 @@
 
 [Source observations and uncertainty](../references/architecture-materials-forme.md)
 
+## Requested interaction and provenance
+
+Dex specifically values the hero shifting from daytime to night **as the user scrolls** (owner observation, October 10, 2026). The parent browser review saw the lighting change but did not independently establish its trigger. Implement the requested scroll-driven direction as an original design; do not claim the source trigger or technical method is verified.
+
 ## Supply project inputs
 
 ```yaml
@@ -26,8 +30,13 @@ font_body_and_license: ""
 color_tokens: {} # charcoal/brown/ivory/stone/taupe only if brand-appropriate
 spacing_type_and_layout_tokens: {}
 stack_and_integration_target: ""
-motion_mode: "static" # optional ambient video or dusk/blue-hour crossfade
-motion_duration_and_pause_label: {}
+motion_mode: "scroll-day-to-night"
+matched_scene_assets: {} # original day/dusk/night, same geometry/camera, or appropriate original scene
+scroll_range_and_stops: {} # bounded start/end, day/dusk/night stops and interpolation
+optional_pinning: false # only if useful; short bounded range, natural entry/exit
+mobile_scroll_range: {} # prefer shorter, unpinned progression
+static_fallback_scene: "" # readable still for reduced motion/no-JS/media failure
+static_view_and_ambient_pause_labels: {}
 media_and_dependency_budget: {}
 ```
 
@@ -39,12 +48,14 @@ media_and_dependency_budget: {}
 >
 > Expose typography, color, spacing, container, card ratio, pill shape, focus, responsive focal-point and motion tokens, plus all content and asset inputs. Use semantic landmarks/headings, native links/buttons, logical focus order, visible focus, sufficient contrast and comfortable touch targets. Keep all important content available without hover, dragging or motion. On phones, stack the material cards, preserve the image subject and prevent text/media collisions or horizontal overflow.
 >
-> Start with a strong compressed still and stable readable copy. Only when assets and budget justify it, use a compressed ambient video with poster or a dusk/blue-hour image crossfade. Those are proposed implementations, not verified source techniques. Supply visible keyboard-operable pause for sustained automatic motion, no autoplay audio, and a static reduced-motion fallback. Maintain semantic content if JavaScript or media fails. Avoid scroll hijacking. Do not add or describe a verified helix carousel: the caption mentions one but none was observed.
+> Make the hero’s day-to-night change explicitly scroll-driven: map a bounded scroll range to matched original daytime, dusk and night imagery, or an appropriate original scene with controllable lighting. Preserve camera, geometry and focal points between states. Progress smoothly toward night when scrolling forward and reverse toward day when scrolling back; hold the state when scrolling stops. Timed ambient playback alone does not meet this requirement. Keep hero text and CTAs stable and readable at every intermediate state. These are proposed techniques, not verified source implementation.
+>
+> Use restrained pinning only if it helps, with a short bounded scroll range and natural entry/exit. Do not hijack native scrolling or make later content difficult to reach. On phones, prefer a shorter unpinned progression and responsive focal points; support touch, wheel and keyboard scrolling. Start with a strong compressed still and retain a static reduced-motion/no-JS/media-failure fallback with all content visible. Offer a static-view control where useful. If sustained automatic firelight or other ambient motion is added, provide a visible keyboard-operable pause. No autoplay audio. Do not add or describe a verified helix carousel: the caption mentions one but none was observed.
 >
 > Use responsive image sizes and explicit dimensions, prioritize the hero still, lazy-load secondary media and measure loading/layout stability. Do not add a large renderer without a concrete need and budget. Pause offscreen/hidden-page motion and clean up listeners when applicable. Inspect existing reusable components and adapt suitable layout/card/fallback patterns; preserve existing assets and avoid building a duplicate framework.
 >
-> Return editable source, configuration instructions, asset/license provenance and generation prompts where used, plus integration guidance for the selected stack. Test desktop and phone layouts, keyboard/focus, contrast across media states, touch targets, all destinations, media failure, no-JS, reduced motion, pause and loading performance. Acceptance requires cinematic photography with quiet editorial hierarchy, efficient loading and full usability without motion. Report actual QA and unrun checks separately; do not claim verified behavior based on this reference. Do not publish, deploy, buy services or change production without separate authorization.
+> Return editable source, configuration instructions, asset/license provenance and generation prompts where used, plus integration guidance for the selected stack. Test forward/reverse progression, unchanged lighting while scroll is stationary, restored scroll positions, optional pinning entry/exit, native mobile/keyboard scrolling, desktop and phone layouts, keyboard/focus, contrast across media states, touch targets, all destinations, media failure, no-JS, reduced motion, pause and loading performance. Acceptance requires cinematic photography with quiet editorial hierarchy, a smooth reversible scroll-driven day-to-night hero, efficient loading and full usability without motion. Report actual QA and unrun checks separately; do not claim verified behavior based on this reference. Do not publish, deploy, buy services or change production without separate authorization.
 
 ## Evidence boundary
 
-The [brief](../references/architecture-materials-forme.md) records parent-attributed playback observations from October 10, 2026. Mobile, hover, drag and keyboard behavior, exact fonts, animation mechanism and real-time 3D remain unverified. This prompt is an original implementation proposal, not a reconstruction or proof of the source’s implementation.
+The [brief](../references/architecture-materials-forme.md) records parent-attributed playback observations from October 10, 2026. Dex’s owner observation supplies the requested scroll trigger; the browser review did not independently establish it. Mobile, hover, drag and keyboard behavior, exact fonts, original trigger/animation mechanism and real-time 3D remain technically unverified. This prompt is an original implementation proposal, not a reconstruction or proof of the source’s implementation.
