@@ -1,0 +1,80 @@
+{
+  "results": [
+    {
+      "name": "Responsive layouts, canvas density and axe at four viewport widths",
+      "pass": true
+    },
+    {
+      "name": "Assembly, hold, release and drift positions are deterministic",
+      "pass": true
+    },
+    {
+      "name": "Canvas changes between assembled and scattered phases",
+      "pass": true
+    },
+    {
+      "name": "Pause holds time, resume advances and replay restarts",
+      "pass": true
+    },
+    {
+      "name": "Configuration changes shape, density and speed",
+      "pass": true
+    },
+    {
+      "name": "Keyboard controls and readable CTA work",
+      "pass": true
+    },
+    {
+      "name": "Reduced motion is static and controls cannot start motion",
+      "pass": true
+    },
+    {
+      "name": "Offscreen stops frames and re-entry resumes",
+      "pass": true
+    },
+    {
+      "name": "Visibility handler stops hidden-tab work (simulated visibility state)",
+      "pass": true
+    },
+    {
+      "name": "No JavaScript retains typography, copy and navigation",
+      "pass": true
+    },
+    {
+      "name": "Touch input is not intercepted; no pointer displacement for touch",
+      "pass": true
+    },
+    {
+      "name": "Destroy cleans observers, animation and restores fallback",
+      "pass": true
+    }
+  ],
+  "scans": [
+    {
+      "width": 320,
+      "violations": [],
+      "density": 420
+    },
+    {
+      "width": 390,
+      "violations": [],
+      "density": 420
+    },
+    {
+      "width": 768,
+      "violations": [],
+      "density": 800
+    },
+    {
+      "width": 1440,
+      "violations": [],
+      "density": 800
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Chromium emulation only; not physical mobile performance",
+    "Hidden-tab branch tested by simulated visibility state",
+    "No Safari/Firefox, screen-reader listening or hosted route test"
+  ]
+}
